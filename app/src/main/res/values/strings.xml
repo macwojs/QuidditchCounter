@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Quiddith Counter</string>
+    <string name="teamAName">Griffindor</string>
+    <string name="teamBName">Slytherin</string>
+    <string name="points10">10</string>
+    <string name="golden">Golden
+        Snitch</string>
+    <string name="restartbutton">Restart</string>
+</resources>
