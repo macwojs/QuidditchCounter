@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:paddingBottom="32dp"
+    android:paddingBottom="16dp"
     android:background="@drawable/quidditch_background"
     tools:context="com.example.android.quidditchcounter.MainActivity">
 
@@ -24,7 +24,6 @@
 
             <TextView
                 style="@style/Text_team"
-                android:padding="3dp"
                 android:text="@string/teamAName" />
 
             <TextView
@@ -32,15 +31,24 @@
                 style="@style/Text_score"
                 android:text="0" />
 
-            <Button
-                style="@style/Button"
-                android:onClick="click10A"
-                android:text="@string/points10" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
 
-            <Button
-                style="@style/Button"
-                android:onClick="clickGoldenA"
-                android:text="@string/golden" />
+                <Button
+                    style="@style/ButtonLand"
+                    android:onClick="click10A"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/points10" />
+
+                <Button
+                    style="@style/ButtonLand"
+                    android:onClick="clickGoldenA"
+                    android:text="@string/golden" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -68,17 +76,26 @@
                 android:text="0"
                 />
 
-            <Button
-                style="@style/Button"
-                android:onClick="click10B"
-                android:text="@string/points10"
-                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
 
-            <Button
-                style="@style/Button"
-                android:onClick="clickGoldenB"
-                android:text="@string/golden"
-                />
+                <Button
+                    style="@style/ButtonLand"
+                    android:onClick="click10B"
+                    android:text="@string/points10"
+                    />
+
+                <Button
+                    style="@style/ButtonLand"
+                    android:onClick="clickGoldenB"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/golden"
+                    />
+
+            </LinearLayout>
 
         </LinearLayout>
 

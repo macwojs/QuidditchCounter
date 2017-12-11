@@ -16,6 +16,10 @@
         <item name="android:textAllCaps">true</item>
         <item name="android:textColor">@android:color/background_light</item>
         <item name="android:textSize">14sp</item>
+        <item name="android:shadowColor">@android:color/darker_gray</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">15</item>
     </style>
 
     <style name="Text_score">
@@ -26,6 +30,10 @@
         <item name="android:textSize">56sp</item>
         <item name="android:textColor">@android:color/background_light</item>
         <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:shadowColor">@android:color/darker_gray</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">15</item>
     </style>
 
     <style name="Button">
@@ -34,6 +42,13 @@
         <item name="android:layout_marginLeft">24dp</item>
         <item name="android:layout_marginRight">24dp</item>
         <item name="android:layout_marginTop">16dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:background">@drawable/button_round</item>
+    </style>
+
+    <style name="ButtonLand">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
         <item name="android:textAlignment">center</item>
         <item name="android:background">@drawable/button_round</item>
     </style>

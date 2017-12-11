@@ -10,11 +10,38 @@ import com.example.android.quidditchcounter.R;
 public class MainActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         displayForTeamA(0);
         displayForTeamB(0);
+
+        if (savedInstanceState != null) {
+            pointsA = savedInstanceState.getInt("pointsA", 0);
+            pointsB = savedInstanceState.getInt("pointsB", 0);
+        }
+
+        displayForTeamA(pointsA);
+        displayForTeamB(pointsB);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putInt("pointA", pointsA);
+        outState.putInt("pointB", pointsB);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        pointsA = savedInstanceState.getInt("pointsB");
+        pointsB = savedInstanceState.getInt("pointsA");
+
+        displayForTeamA(pointsA);
+        displayForTeamB(pointsB);
     }
 
     int pointsA = 0;
@@ -39,8 +66,6 @@ public class MainActivity extends AppCompatActivity {
         pointsB = pointsB + 150;
         displayForTeamB(pointsB);
     }
-
-
 
     /**
      * Displays the given score for Team A.
