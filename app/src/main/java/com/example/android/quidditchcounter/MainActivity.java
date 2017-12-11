@@ -8,44 +8,38 @@ import android.widget.TextView;
 import com.example.android.quidditchcounter.R;
 
 public class MainActivity extends AppCompatActivity {
+    static final String STATE_POINTSA = "pointsA";
+    static final String STATE_POINTSB = "pointsB";
+    int pointsA = 0;
+    int pointsB = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        displayForTeamA(0);
-        displayForTeamB(0);
-
-        if (savedInstanceState != null) {
-            pointsA = savedInstanceState.getInt("pointsA", 0);
-            pointsB = savedInstanceState.getInt("pointsB", 0);
-        }
 
         displayForTeamA(pointsA);
         displayForTeamB(pointsB);
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        savedInstanceState.putInt(STATE_POINTSA, pointsA);
+        savedInstanceState.putInt(STATE_POINTSB, pointsB);
 
-        outState.putInt("pointA", pointsA);
-        outState.putInt("pointB", pointsB);
+        super.onSaveInstanceState(savedInstanceState);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
 
-        pointsA = savedInstanceState.getInt("pointsB");
-        pointsB = savedInstanceState.getInt("pointsA");
+        pointsA = savedInstanceState.getInt(STATE_POINTSA);
+        pointsB = savedInstanceState.getInt(STATE_POINTSB);
 
         displayForTeamA(pointsA);
         displayForTeamB(pointsB);
     }
-
-    int pointsA = 0;
-    int pointsB = 0;
 
     public void click10A(View view) {
         pointsA = pointsA + 10;
