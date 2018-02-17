@@ -30,7 +30,7 @@
             <TextView
                 android:id="@+id/team_a_score"
                 style="@style/Text_score"
-                android:text="0" />
+                android:text="@string/zero_count" />
 
             <Button
                 style="@style/Button"
@@ -65,7 +65,7 @@
             <TextView
                 style="@style/Text_score"
                 android:id="@+id/team_b_score"
-                android:text="0"
+                android:text="@string/zero_count"
                 />
 
             <Button

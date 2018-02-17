@@ -29,7 +29,8 @@
             <TextView
                 android:id="@+id/team_a_score"
                 style="@style/Text_score"
-                android:text="0" />
+                android:text="@string/zero_count"
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -40,8 +41,10 @@
                 <Button
                     style="@style/ButtonLand"
                     android:onClick="click10A"
+                    android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
-                    android:text="@string/points10" />
+                    android:text="@string/points10"
+                    />
 
                 <Button
                     style="@style/ButtonLand"
@@ -73,7 +76,7 @@
             <TextView
                 style="@style/Text_score"
                 android:id="@+id/team_b_score"
-                android:text="0"
+                android:text="@string/zero_count"
                 />
 
             <LinearLayout
@@ -92,6 +95,7 @@
                     style="@style/ButtonLand"
                     android:onClick="clickGoldenB"
                     android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
                     android:text="@string/golden"
                     />
 

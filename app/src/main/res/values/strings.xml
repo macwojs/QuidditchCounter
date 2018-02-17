@@ -3,7 +3,8 @@
     <string name="teamAName">Griffindor</string>
     <string name="teamBName">Slytherin</string>
     <string name="points10">10</string>
-    <string name="golden">Golden
+    <string name="golden">Golden \n
         Snitch</string>
     <string name="restartbutton">Restart</string>
+    <string name="zero_count">0</string>
 </resources>
